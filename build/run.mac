@@ -1,0 +1,28 @@
+# === run.mac – VERSIÓN QUE FUNCIONA 100% ===
+
+# 1. Inicializar
+/run/initialize
+
+# 2. Abrir visor
+/vis/open OGLIQt 800x600-0+0
+
+# 3. Dibujar geometría
+/vis/drawVolume
+
+# 4. Configurar vista
+/vis/viewer/set/viewpointVector -1 0.5 0.5
+/vis/viewer/zoom 1.8
+/vis/viewer/set/style surface
+
+# 5. Agregar trayectorias
+/vis/scene/add/trajectories smooth
+
+# 6. Crear modelo
+/vis/modeling/trajectories/create/drawByCharge
+
+# 7. CONFIGURAR (¡CORREGIDO!)
+/vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts true
+/vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 2
+
+# 8. Ejecutar
+/run/beamOn 100
