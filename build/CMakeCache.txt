@@ -251,6 +251,9 @@ Geant4_DIR:PATH=/home/angel/anaconda3/envs/geant-root-env/lib/cmake/Geant4
 //HDF5 C Wrapper compiler.  Used only to detect HDF5 compile flags.
 HDF5_C_COMPILER_EXECUTABLE:FILEPATH=/home/angel/anaconda3/envs/geant-root-env/bin/h5cc
 
+//Path to a file.
+HDF5_C_INCLUDE_DIR:PATH=HDF5_C_INCLUDE_DIR-NOTFOUND
+
 //Path to a library.
 HDF5_C_LIBRARY_crypto:FILEPATH=/home/angel/anaconda3/envs/geant-root-env/lib/libcrypto.so
 
@@ -280,6 +283,15 @@ HDF5_DIFF_EXECUTABLE:FILEPATH=/home/angel/anaconda3/envs/geant-root-env/bin/h5di
 
 //The directory containing a CMake configuration file for HDF5.
 HDF5_DIR:PATH=HDF5_DIR-NOTFOUND
+
+//HDF5 library compiled with parallel IO support
+HDF5_IS_PARALLEL:BOOL=FALSE
+
+//Path to a library.
+HDF5_hdf5_LIBRARY_DEBUG:FILEPATH=HDF5_hdf5_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+HDF5_hdf5_LIBRARY_RELEASE:FILEPATH=HDF5_hdf5_LIBRARY_RELEASE-NOTFOUND
 
 //Path to a file.
 OPENGL_EGL_INCLUDE_DIR:PATH=OPENGL_EGL_INCLUDE_DIR-NOTFOUND
@@ -1111,10 +1123,18 @@ GEANT4_HAVE_H5_HAVE_THREADSAFE:INTERNAL=1
 HDF5_C_COMPILER_EXECUTABLE-ADVANCED:INTERNAL=1
 //Result of TRY_COMPILE
 HDF5_C_COMPILER_NO_INTERROGATE:INTERNAL=FALSE
+//ADVANCED property for variable: HDF5_C_INCLUDE_DIR
+HDF5_C_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: HDF5_DIFF_EXECUTABLE
 HDF5_DIFF_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: HDF5_DIR
 HDF5_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: HDF5_IS_PARALLEL
+HDF5_IS_PARALLEL-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: HDF5_hdf5_LIBRARY_DEBUG
+HDF5_hdf5_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: HDF5_hdf5_LIBRARY_RELEASE
+HDF5_hdf5_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_EGL_INCLUDE_DIR
 OPENGL_EGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_GLES2_INCLUDE_DIR
